@@ -42,13 +42,22 @@
 #
 #   Async is used for some basic responses to certain messages
 #
+#   For Usage on RaspberryPi (Assuming os works and internet connection established)
+#       1:  SSH into Raspberry Pi
+#       2:  Transfer files
+#       3:  Use tmux to create separate thread session
+#       4:  Attach to session
+#       5:  Run DiscordWeatherBot.py
+#       6:  Detatch from session
+#       7:  Disconnect from SSH
+#
 
 #------------------------------------------CODE-STARTS-HERE----------------------------------------
 
 import discord
 import asyncio
 from datetime import datetime, timedelta
-import WeatherScrapingTest as scraper
+import WeatherScraper as scraper
 import random as rand
 
 TOKEN = 'YOUR_BOT_TOKEN'
